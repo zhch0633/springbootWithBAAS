@@ -1,0 +1,5 @@
+{
+  "name": "BaaS on Heroku: Java",
+  "description": "A baas service run on heroku in java.",
+  "image": "heroku/java"
+}
