@@ -39,5 +39,16 @@ dependencies {
     testCompile("junit:junit")
 }
 
-task stage(dependsOn: ['build', 'clean'])
+task stage(type:Copy, dependsOn: ['build', 'clean']){
+    from jar.archivePath
+    into project.rootDir
+    rename {
+        'app.jar'
+    }
+}
+
+clean << {
+    project.file('app.jar').delete()
+}
+
 build.mustRunAfter clean
