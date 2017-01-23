@@ -1,1 +1,2 @@
-include 'test'
+include 'server','data'
+project(':data').projectDir = new File('modules/data')
